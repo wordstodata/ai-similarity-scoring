@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 340">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- Ground Truth Section -->
+  <rect x="20" y="20" width="340" height="140" rx="8" fill="#f0f4f8" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="190" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b" font-weight="600">GROUND TRUTH</text>
+
+  <rect x="40" y="55" width="120" height="44" rx="5" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="100" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#334155" font-weight="500">USC v1</text>
+  <text x="100" y="88" text-anchor="middle" font-family="monospace" font-size="8" fill="#64748b">"...specified..."</text>
+
+  <rect x="40" y="107" width="120" height="44" rx="5" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="100" y="124" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#334155" font-weight="500">USC v2</text>
+  <text x="100" y="140" text-anchor="middle" font-family="monospace" font-size="8" fill="#64748b">"...foreign..."</text>
+
+  <rect x="200" y="70" width="140" height="60" rx="5" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="270" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#1e40af" font-weight="500">Word Diff</text>
+  <text x="270" y="108" text-anchor="middle" font-family="monospace" font-size="9" fill="#dc2626">- specified</text>
+  <text x="270" y="122" text-anchor="middle" font-family="monospace" font-size="9" fill="#16a34a">+ foreign</text>
+
+  <!-- Arrows: USC boxes to Word Diff -->
+  <line x1="160" y1="77" x2="195" y2="95" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="160" y1="129" x2="195" y2="105" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Prediction Section -->
+  <rect x="20" y="180" width="540" height="140" rx="8" fill="#fffbeb" stroke="#fcd34d" stroke-width="1.5"/>
+  <text x="290" y="202" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#a16207" font-weight="600">PREDICTION</text>
+
+  <rect x="40" y="215" width="120" height="70" rx="5" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="100" y="232" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#334155" font-weight="500">Bill XML</text>
+  <text x="100" y="246" text-anchor="middle" font-family="monospace" font-size="7" fill="#64748b">by striking</text>
+  <text x="100" y="256" text-anchor="middle" font-family="monospace" font-size="7" fill="#64748b">"...specified..."</text>
+  <text x="100" y="266" text-anchor="middle" font-family="monospace" font-size="7" fill="#64748b">and inserting</text>
+  <text x="100" y="276" text-anchor="middle" font-family="monospace" font-size="7" fill="#64748b">"...foreign..."</text>
+
+  <rect x="190" y="215" width="100" height="55" rx="5" fill="#fff" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="240" y="232" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#334155" font-weight="500">Extract</text>
+  <text x="240" y="246" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#334155" font-weight="500">Amendments</text>
+  <text x="240" y="262" text-anchor="middle" font-family="monospace" font-size="8" fill="#64748b">amendment §174</text>
+
+  <rect x="320" y="225" width="70" height="40" rx="5" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="355" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#92400e" font-weight="600">LLM</text>
+
+  <rect x="420" y="215" width="120" height="70" rx="5" fill="#fde68a" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="480" y="230" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#92400e" font-weight="500">Predicted Diffs</text>
+  <text x="480" y="246" text-anchor="middle" font-family="monospace" font-size="9" fill="#92400e">removed:</text>
+  <text x="480" y="258" text-anchor="middle" font-family="monospace" font-size="9" fill="#dc2626">["specified"]</text>
+  <text x="480" y="270" text-anchor="middle" font-family="monospace" font-size="9" fill="#92400e">added:</text>
+  <text x="480" y="282" text-anchor="middle" font-family="monospace" font-size="9" fill="#16a34a">["foreign"]</text>
+
+  <!-- Arrows: Prediction chain -->
+  <line x1="160" y1="250" x2="185" y2="245" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="290" y1="245" x2="315" y2="245" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="390" y1="245" x2="415" y2="245" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Similarity Score -->
+  <rect x="640" y="145" width="140" height="70" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="710" y="170" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#166534" font-weight="500">Similarity Score</text>
+  <text x="710" y="198" text-anchor="middle" font-family="monospace" font-size="20" fill="#166534" font-weight="700">1.0</text>
+
+  <!-- Arrows to Similarity Score -->
+  <line x1="340" y1="105" x2="635" y2="165" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="540" y1="250" x2="635" y2="195" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

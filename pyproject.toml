@@ -1,0 +1,12 @@
+[project]
+name = "ai-similarity-scoring"
+version = "0.1.0"
+license = { text = "MIT OR Apache-2.0" }
+description = "AI Similarity Scoring tool for Words to Data"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "click>=8.3.2",
+    "tqdm>=4.67.3",
+    "words-to-data>=0.2.0",
+]

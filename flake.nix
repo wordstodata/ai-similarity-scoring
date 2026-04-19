@@ -16,7 +16,7 @@
           buildInputs = with pkgs; [
             
             # python 3
-            python3
+            python314
 
             # Development tools
             git
